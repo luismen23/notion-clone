@@ -17,8 +17,10 @@ function Header() {
     <div className='flex items-center justify-between p-5'>
       {user && (
         <h1 className='text-2xl'>
-          {user?.fullName}
-          {`'s`} Space
+          <a href='/'>
+            {user?.fullName}
+            {`'s`} Space
+          </a>
         </h1>
       )}
 

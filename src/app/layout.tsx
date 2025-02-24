@@ -1,14 +1,7 @@
 import type { Metadata } from "next"
 import "./globals.css"
 import Header from "@/components/Header"
-import {
-  ClerkProvider,
-  SignInButton,
-  SignUpButton,
-  SignedIn,
-  SignedOut,
-  UserButton,
-} from "@clerk/nextjs"
+import { ClerkProvider } from "@clerk/nextjs"
 import Sidebar from "@/components/Sidebar"
 
 export const metadata: Metadata = {
@@ -23,7 +16,7 @@ export default function RootLayout({
 }>) {
   return (
     <ClerkProvider>
-      <html lang='en' className=''>
+      <html lang='en' suppressHydrationWarning className=''>
         <body className='overflow-hidden'>
           <Header />
 
